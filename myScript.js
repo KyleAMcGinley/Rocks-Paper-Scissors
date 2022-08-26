@@ -7,4 +7,12 @@
 
 function getComputerChoice() {
 
+   let randomNumber = Math.floor(Math.random() * 3);
+
+   let myArray = ['rock', 'paper', 'scissors'];
+
+   return myArray.splice(randomNumber,1).toString();
+
 }
+
+console.log(getComputerChoice())
