@@ -6,19 +6,21 @@
    Will use the randomly generate number in a splice function to return one of the words */
 
   
-   function getComputerChoice() {
+   var computerSelection = (function getComputerChoice() {
 
    let randomNumber = Math.floor(Math.random() * 3);
 
    let myArray = ['Rock', 'Paper', 'Scissors'];
    
    return myArray.splice(randomNumber,1).toString();
-}
+})();
 
-console.log(getComputerChoice())
+console.log(computerSelection)
 
 /* Now have to make a function to play a round of the game
    I have the function that succesfully generates a selection, which will be a parameter (Will try making parameter the function)
    Need to use if else in the function to give the outcomes for each result. */
 
-function playRockPaperScissors
+   
+
+
