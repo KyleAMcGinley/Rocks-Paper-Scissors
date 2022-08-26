@@ -15,12 +15,38 @@
    return myArray.splice(randomNumber,1).toString();
 })();
 
-console.log(computerSelection)
 
 /* Now have to make a function to play a round of the game
    I have the function that succesfully generates a selection, which will be a parameter (Will try making parameter the function)
-   Need to use if else in the function to give the outcomes for each result. */
+   Need to use if else in the function to give the outcomes for each result. 
+   Thinking of using a switch function for each possible outcome
+   Will try using a bunch of if elses first*/
 
+   var userSelection = ''
+
+   function playRockPaperScissors(userSelection, computerSelection) {
+      
+      if (userSelection === computerSelection) {
+         console.log('It is a draw!')
+      } else if (userSelection === 'Rock' && 'Paper')
+
+   }
    
+   var a = '';
+   var b = '';
+   
+   function playTrial(a, b) {
+      
+      if (a === b) {
+         return console.log('It is a draw!');
+      } else if (a === 'Rock' && b = 'Paper') {
+         return console.log('You lose! Paper beats rock!');
+      } else (a === 'Paper' && b === 'Rock') {
+         return console.log('You win! Paper beats rock!')
+      }
+
+   }
+
+   console.log(playTrial('Rock', 'Paper'))
 
 
