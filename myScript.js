@@ -16,6 +16,7 @@
 })();
 
 
+
 /* Now have to make a function to play a round of the game
    I have the function that succesfully generates a selection, which will be a parameter (Will try making parameter the function)
    Need to use if else in the function to give the outcomes for each result. 
@@ -24,14 +25,14 @@
 
    var userSelection = ''
    
-   function playTrial(userSelection, computerSelection) {
+   function playTrial(userSelection) {
       
       if (userSelection === computerSelection) {
          return console.log('It is a draw!');
       } else if (userSelection === 'Rock' &&  computerSelection === 'Paper') {
          return console.log('You lose! Paper beats rock!');
       } else if (userSelection ==='Rock' && computerSelection === 'Scissors') {
-         return console.log('You win! Scissors beats rock!');         
+         return console.log('You win! Rock beats Scissors!');         
       } else if (userSelection === 'Paper' && computerSelection === 'Rock') {
          return console.log('You win! Paper beats rock!');
       } else if (userSelection === 'Paper' && computerSelection === 'Scissors') {
@@ -42,4 +43,4 @@
          return console.log('You lose! Rock beats scissors!');
       }
    }
-   playTrial('Rock', b)
+   playTrial('Rock')
