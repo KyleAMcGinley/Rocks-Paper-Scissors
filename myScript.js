@@ -23,30 +23,23 @@
    Will try using a bunch of if elses first*/
 
    var userSelection = ''
-
-   function playRockPaperScissors(userSelection, computerSelection) {
+   
+   function playTrial(userSelection, computerSelection) {
       
       if (userSelection === computerSelection) {
-         console.log('It is a draw!')
-      } else if (userSelection === 'Rock' && 'Paper')
-
-   }
-   
-   var a = '';
-   var b = '';
-   
-   function playTrial(a, b) {
-      
-      if (a === b) {
          return console.log('It is a draw!');
-      } else if (a === 'Rock' && b = 'Paper') {
+      } else if (userSelection === 'Rock' &&  computerSelection === 'Paper') {
          return console.log('You lose! Paper beats rock!');
-      } else (a === 'Paper' && b === 'Rock') {
-         return console.log('You win! Paper beats rock!')
+      } else if (userSelection ==='Rock' && computerSelection === 'Scissors') {
+         return console.log('You win! Scissors beats rock!');         
+      } else if (userSelection === 'Paper' && computerSelection === 'Rock') {
+         return console.log('You win! Paper beats rock!');
+      } else if (userSelection === 'Paper' && computerSelection === 'Scissors') {
+         return console.log('You lose! Scissors beats paper!');
+      } else if (userSelection === 'Scissors' && computerSelection === 'Paper') {
+         return console.log('You win! Scissors beats paper!');
+      } else if (userSelection === 'Scissors' && computerSelection === 'Rock') {
+         return console.log('You lose! Rock beats scissors!');
       }
-
    }
-
-   console.log(playTrial('Rock', 'Paper'))
-
-
+   playTrial('Rock', b)
