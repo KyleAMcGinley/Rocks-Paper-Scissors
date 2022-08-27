@@ -23,7 +23,7 @@
    Thinking of using a switch function for each possible outcome
    Will try using a bunch of if elses first*/
 
-   var userSelection = ''
+   var userSelection = prompt('Enter Rock, Paper, or Scissors');
    
    function playTrial(userSelection) {
       
@@ -43,4 +43,5 @@
          return console.log('You lose! Rock beats scissors!');
       }
    }
-   playTrial('Rock')
+
+   playTrial(userSelection);
