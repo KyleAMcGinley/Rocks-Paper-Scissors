@@ -25,6 +25,9 @@
 
    var userSelection = prompt('Enter Rock, Paper, or Scissors');
    
+   function fiveRoundGame(userSelection){
+
+      for (i = 1; i<=5; i++) {   
    function playTrial(userSelection) {
       
       if (userSelection === computerSelection) {
@@ -43,5 +46,7 @@
          return console.log('You lose! Rock beats scissors!');
       }
    }
+}
+}
 
    playTrial(userSelection);
