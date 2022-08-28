@@ -6,14 +6,29 @@
    Will use the randomly generate number in a splice function to return one of the words */
 
   
-   const computerSelection = (function getComputerChoice() {
+   function getComputerChoice() {
 
       let randomNumber = Math.floor(Math.random() * 3);
    
       let myArray = ['Rock', 'Paper', 'Scissors'];
       
       return myArray.splice(randomNumber,1).toString();
-   })();
+   };
+
+   const computerSelection = getComputerChoice();
+
+   function getPlayerChoice(){
+
+      let answer = '';
+
+      answer = prompt('Enter Rock, Paper, or Scissors');
+
+      return answer;
+   }
+   
+   const userSelection = getPlayerChoice();
+
+
    
    
    
@@ -23,15 +38,8 @@
       Thinking of using a switch function for each possible outcome
       Will try using a bunch of if elses first*/
    
-      var userSelection = ''
-        
-   function fiveGameTrial(userSelection, computerSelection) {
-   
-
-         userSelection = prompt('Enter Rock, Paper, or Scissors');
-
-         
-         function playTrial(userSelection, computerSelection) {
+              
+      function playTrial(userSelection, computerSelection) {
          
          if (userSelection === computerSelection) {
             return 'It is a draw!';
@@ -50,9 +58,13 @@
          }
       }
 
-      const result = playTrial(userSelection, computerSelection);
+      function fiveTrials() {
+         
+         for (i = 1; i <= 5; i++) {
 
-      return result;
-   }
-   
-      console.log(fiveGameTrial(userSelection, computerSelection));
+         playTrial();
+
+         } 
+      }
+
+      fiveTrials();
