@@ -6,7 +6,7 @@
    Will use the randomly generate number in a splice function to return one of the words */
 
   
-   var computerSelection = (function getComputerChoice() {
+   const computerSelection = (function getComputerChoice() {
 
       let randomNumber = Math.floor(Math.random() * 3);
    
@@ -23,11 +23,15 @@
       Thinking of using a switch function for each possible outcome
       Will try using a bunch of if elses first*/
    
-      var userSelection = '';
+      var userSelection = ''
         
-      function playTrial(userSelection, computerSelection) {
+   function fiveGameTrial(userSelection, computerSelection) {
+   
 
-         var userSelection = prompt('Enter Rock, Paper, or Scissors');
+         userSelection = prompt('Enter Rock, Paper, or Scissors');
+
+         
+         function playTrial(userSelection, computerSelection) {
          
          if (userSelection === computerSelection) {
             return 'It is a draw!';
@@ -45,5 +49,10 @@
             return 'You lose! Rock beats scissors!';
          }
       }
+
+      const result = playTrial(userSelection, computerSelection);
+
+      return result;
+   }
    
-      console.log(playTrial(userSelection, computerSelection));
+      console.log(fiveGameTrial(userSelection, computerSelection));
