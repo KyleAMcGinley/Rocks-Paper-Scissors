@@ -59,12 +59,12 @@
       }
 
       function fiveTrials() {
-         
-         for (i = 1; i <= 5; i++) {
 
-         playTrial();
-
-         } 
+         for (let i = 1; i <= 5; i++) {
+         const computerSelection = getComputerChoice();
+         const userSelection = getPlayerChoice();
+         console.log(playTrial(userSelection, computerSelection));
       }
+   }
 
-      fiveTrials();
+   fiveTrials()
