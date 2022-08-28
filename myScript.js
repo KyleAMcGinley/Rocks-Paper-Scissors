@@ -37,24 +37,36 @@
       Need to use if else in the function to give the outcomes for each result. 
       Thinking of using a switch function for each possible outcome
       Will try using a bunch of if elses first*/
+
+      var userScore = 0;
+      var computerScore = 0;
    
               
       function playTrial(userSelection, computerSelection) {
-         
+         //Need function to keep score after the trial
+         //Have math function to add score to each person depending on scenario
+         //Result in the end with who wins or loses and the score
+
          if (userSelection === computerSelection) {
             return 'It is a draw!';
          } else if (userSelection === 'Rock' &&  computerSelection === 'Paper') {
-            return 'You lose! Paper beats rock!';
+            computerScore += 1;
+            return 'You lose! Paper beats rock!' + ' User: ' + userScore + ' Computer: ' + computerScore;
          } else if (userSelection ==='Rock' && computerSelection === 'Scissors') {
-            return 'You win! Rock beats Scissors!';         
+            userScore += 1;
+            return 'You win! Rock beats Scissors!' + ' User: ' + userScore + ' Computer: ' + computerScore;         
          } else if (userSelection === 'Paper' && computerSelection === 'Rock') {
-            return 'You win! Paper beats rock!';
+            userScore += 1;
+            return 'You win! Paper beats rock!' + ' User: ' + userScore + ' Computer: ' + computerScore;
          } else if (userSelection === 'Paper' && computerSelection === 'Scissors') {
-            return 'You lose! Scissors beats paper!';
+            computerScore += 1;
+            return 'You lose! Scissors beats paper!' + ' User: ' + userScore + ' Computer: ' + computerScore;
          } else if (userSelection === 'Scissors' && computerSelection === 'Paper') {
-            return 'You win! Scissors beats paper!';
+            userScore += 1;
+            return 'You win! Scissors beats paper!' + ' User: ' + userScore + ' Computer: ' + computerScore;
          } else if (userSelection === 'Scissors' && computerSelection === 'Rock') {
-            return 'You lose! Rock beats scissors!';
+            computerScore += 1;
+            return 'You lose! Rock beats scissors!' + ' User: ' + userScore + ' Computer: ' + computerScore;
          }
       }
 
@@ -67,4 +79,4 @@
       }
    }
 
-   fiveTrials()
+fiveTrials();
