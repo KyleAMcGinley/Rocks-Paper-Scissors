@@ -48,7 +48,7 @@
          //Result in the end with who wins or loses and the score
 
          if (userSelection === computerSelection) {
-            return 'It is a draw!';
+            return 'It is a draw!' + ' User: ' + userScore + ' Computer: ' + computerScore;
          } else if (userSelection === 'Rock' &&  computerSelection === 'Paper') {
             computerScore += 1;
             return 'You lose! Paper beats rock!' + ' User: ' + userScore + ' Computer: ' + computerScore;
@@ -72,7 +72,7 @@
 
       function fiveTrials() {
 
-         for (let i = 1; i <= 5; i++) {
+         for (let i = 0; i < 5; i++) {
          const computerSelection = getComputerChoice();
          const userSelection = getPlayerChoice();
          console.log(playTrial(userSelection, computerSelection));
