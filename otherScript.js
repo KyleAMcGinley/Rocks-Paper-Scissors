@@ -82,7 +82,6 @@ scissorsButton.addEventListener('click', scissorsGame);
 var playerResults = 0;
 var computerResults = 0;
 var tieResults = 0;
-var finalWinner = '';
 
 function rockGame(){
     let playerSelection = 'rock';
@@ -98,7 +97,13 @@ function rockGame(){
         tieResults += 1;
         tieScore.textContent= "Tie: " + tieResults.toString();
         }
+   
+    if(playerResults === 5){
+        winnerScoreDisplay.textContent="Player Wins!";
+    }else if(computerResults === 5){
+        winnerScoreDisplay.textContent="Computer Wins";
     }
+}
 
 function paperGame(){
     let playerSelection = 'paper';
@@ -114,6 +119,12 @@ function paperGame(){
         tieResults += 1;
         tieScore.textContent= "Tie: " + tieResults.toString();
         }
+
+    if(playerResults === 5){
+        winnerScoreDisplay.textContent="Player Wins!";
+    }else if(computerResults === 5){
+        winnerScoreDisplay.textContent="Computer Wins";
+    }
 }
 
 function scissorsGame(){
@@ -130,12 +141,10 @@ function scissorsGame(){
         tieResults += 1;
         tieScore.textContent= "Tie: " + tieResults.toString();
         }
-}
 
-function displayWinner(){
-    if(playerScore === 5){
+    if(playerResults === 5){
         winnerScoreDisplay.textContent="Player Wins!";
-    }else if(computerScore === 5){
+    }else if(computerResults === 5){
         winnerScoreDisplay.textContent="Computer Wins";
     }
 }
