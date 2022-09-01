@@ -68,13 +68,44 @@ function logRound(playerChoice, computerChoice, winner, round){
 
 const buttons = document.querySelectorAll('button');
 const rockButton = document.querySelector('button#rock');
+const paperButton = document.querySelector('button#paper');
+const scissorsButton = document.querySelector('button#scissors');
 const playerScore = document.querySelector('div.player-score');
 const computerScore = document.querySelector('div.computer-score');
 const tieScore = document.querySelector('div.tieScore');
+
 rockButton.addEventListener('click', rockGame);
+paperButton.addEventListener('click', paperGame);
+scissorsButton.addEventListener('click', scissorsGame);
 
 function rockGame(){
     let playerSelection = 'rock';
+    const computerSelection = computerChoice();
+    const winner = checkWinner(playerSelection, computerSelection);
+    if (winner === 'Player'){
+        playerScore.textContent="Player: 1";
+    } else if (winner === 'Computer'){
+        computerScore.textContent="Computer: 1"
+    } else{
+        tieScore.textContent="Ties: 1"
+    }
+}
+
+function paperGame(){
+    let playerSelection = 'paper';
+    const computerSelection = computerChoice();
+    const winner = checkWinner(playerSelection, computerSelection);
+    if (winner === 'Player'){
+        playerScore.textContent="Player: 1";
+    } else if (winner === 'Computer'){
+        computerScore.textContent="Computer: 1"
+    } else{
+        tieScore.textContent="Ties: 1"
+    }
+}
+
+function scissorsGame(){
+    let playerSelection = 'scissors';
     const computerSelection = computerChoice();
     const winner = checkWinner(playerSelection, computerSelection);
     if (winner === 'Player'){
