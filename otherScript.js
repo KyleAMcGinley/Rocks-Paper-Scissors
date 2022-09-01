@@ -105,12 +105,15 @@ function paperGame(){
     const computerSelection = computerChoice();
     const winner = checkWinner(playerSelection, computerSelection);
     if (winner === 'Player'){
-        playerScore.textContent="Player: 1";
+        playerResults += 1;
+        playerScore.textContent="Player: " + playerResults.toString();
     } else if (winner === 'Computer'){
-        computerScore.textContent="Computer: 1"
+        computerResults += 1;
+        computerScore.textContent="Computer: " + computerResults.toString();
     } else{
-        tieScore.textContent="Ties: 1"
-    }
+        tieResults += 1;
+        tieScore.textContent= "Tie: " + tieResults.toString();
+        }
 }
 
 function scissorsGame(){
@@ -118,12 +121,15 @@ function scissorsGame(){
     const computerSelection = computerChoice();
     const winner = checkWinner(playerSelection, computerSelection);
     if (winner === 'Player'){
-        playerScore.textContent="Player: 1";
+        playerResults += 1;
+        playerScore.textContent="Player: " + playerResults.toString();
     } else if (winner === 'Computer'){
-        computerScore.textContent="Computer: 1"
+        computerResults += 1;
+        computerScore.textContent="Computer: " + computerResults.toString();
     } else{
-        tieScore.textContent="Ties: 1"
-    }
+        tieResults += 1;
+        tieScore.textContent= "Tie: " + tieResults.toString();
+        }
 }
 
 function displayWinner(){
