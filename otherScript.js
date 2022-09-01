@@ -72,24 +72,33 @@ const paperButton = document.querySelector('button#paper');
 const scissorsButton = document.querySelector('button#scissors');
 const playerScore = document.querySelector('div.player-score');
 const computerScore = document.querySelector('div.computer-score');
-const tieScore = document.querySelector('div.tieScore');
+const tieScore = document.querySelector('div.tie-score');
+const winnerScoreDisplay = document.querySelector('div.display-winner');
 
 rockButton.addEventListener('click', rockGame);
 paperButton.addEventListener('click', paperGame);
 scissorsButton.addEventListener('click', scissorsGame);
+
+var playerResults = 0;
+var computerResults = 0;
+var tieResults = 0;
+var finalWinner = '';
 
 function rockGame(){
     let playerSelection = 'rock';
     const computerSelection = computerChoice();
     const winner = checkWinner(playerSelection, computerSelection);
     if (winner === 'Player'){
-        playerScore.textContent="Player: 1";
+        playerResults += 1;
+        playerScore.textContent="Player: " + playerResults.toString();
     } else if (winner === 'Computer'){
-        computerScore.textContent="Computer: 1"
+        computerResults += 1;
+        computerScore.textContent="Computer: " + computerResults.toString();
     } else{
-        tieScore.textContent="Ties: 1"
+        tieResults += 1;
+        tieScore.textContent= "Tie: " + tieResults.toString();
+        }
     }
-}
 
 function paperGame(){
     let playerSelection = 'paper';
@@ -117,3 +126,10 @@ function scissorsGame(){
     }
 }
 
+function displayWinner(){
+    if(playerScore === 5){
+        winnerScoreDisplay.textContent="Player Wins!";
+    }else if(computerScore === 5){
+        winnerScoreDisplay.textContent="Computer Wins";
+    }
+}
